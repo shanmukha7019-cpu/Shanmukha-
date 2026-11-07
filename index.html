@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmukha Palegara | Portfolio</title>
+
+    <style>
+        /* Basic page settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation bar */
+        header {
+            background-color: #14213d;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #00d4ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Common section settings */
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #14213d;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* Home section */
+        .home {
+            min-height: 480px;
+            background: linear-gradient(135deg, #14213d, #244b75);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 45px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .home h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .home h3 {
+            color: #00d4ff;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .home p {
+            max-width: 450px;
+            margin-bottom: 25px;
+        }
+
+        /* Profile image */
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 5px solid #00d4ff;
+            object-fit: cover;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #00b4d8;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0077b6;
+            transform: translateY(-3px);
+        }
+
+        /* About section */
+        .about {
+            background-color: white;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Education section */
+        .education-card {
+            background: white;
+            padding: 25px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Skills section */
+        .skills {
+            background-color: white;
+        }
+
+        .skill-box {
+            display: inline-block;
+            background-color: #14213d;
+            color: white;
+            padding: 15px 35px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            background-color: #00b4d8;
+            transform: translateY(-5px);
+        }
+
+        /* Projects section */
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 8px;
+            background-color: #14213d;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .social-links a:hover {
+            background-color: #00b4d8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+                font-size: 14px;
+            }
+
+            .home {
+                text-align: center;
+                padding: 50px 6%;
+            }
+
+            .home h1 {
+                font-size: 30px;
+            }
+
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation menu -->
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+
+        <div>
+            <h3>Hello, Welcome to My Portfolio!</h3>
+            <h1>I'm Shanmukha Palegara</h1>
+            <h3>Web Developer</h3>
+
+            <p>
+                I am a beginner in web development.
+                I enjoy learning coding and developing
+                my technical skills.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <!-- Replace this placeholder with your own photo -->
+        <img
+            src="https://placehold.co/300x300/14213d/00d4ff?text=Your+Photo"
+            alt="Shanmukha Profile Photo"
+            class="profile-img"
+        >
+
+    </section>
+
+    <!-- About me section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Shanmukha Palegara D A.
+            I am from Tumkur. I am interested in technology
+            and web development. I am currently learning
+            coding and improving my programming knowledge.
+            My goal is to become a skilled web developer
+            and build useful projects.
+        </p>
+    </section>
+
+    <!-- Education section -->
+    <section id="education">
+        <h2>My Education</h2>
+
+        <div class="education-card">
+            <h3>BCA - Bachelor of Computer Applications</h3>
+            <p>General</p>
+            <p>Currently pursuing / studying BCA</p>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill-box">Python</div>
+        <div class="skill-box">Learning Programming</div>
+        <div class="skill-box">Problem Solving</div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A personal website created using
+                    HTML and CSS to introduce myself.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Python Projects</h3>
+                <p>
+                    I am learning Python and planning
+                    to develop beginner-level projects.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Future Projects</h3>
+                <p>
+                    I am interested in building more
+                    creative projects as I learn new skills.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:shanmukhapalegara17@gmail.com">
+                shanmukhapalegara17@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Phone:
+            <a href="tel:7019400790">
+                7019400790
+            </a>
+        </p>
+
+        <p>Location: Tumkur, Karnataka</p>
+
+        <br>
+
+        <a
+            href="mailto:shanmukhapalegara17@gmail.com"
+            class="btn"
+        >
+            Send Me an Email
+        </a>
+
+        <!-- Replace # with your actual social media profile links -->
+        <div class="social-links">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Shanmukha Palegara.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
